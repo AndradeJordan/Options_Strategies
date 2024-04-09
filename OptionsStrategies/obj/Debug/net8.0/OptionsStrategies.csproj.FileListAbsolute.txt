@@ -1,0 +1,14 @@
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\bin\Debug\net8.0\OptionsStrategies.exe
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\bin\Debug\net8.0\OptionsStrategies.deps.json
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\bin\Debug\net8.0\OptionsStrategies.runtimeconfig.json
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\bin\Debug\net8.0\OptionsStrategies.dll
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\bin\Debug\net8.0\OptionsStrategies.pdb
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\obj\Debug\net8.0\OptionsStrategies.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\obj\Debug\net8.0\OptionsStrategies.AssemblyInfoInputs.cache
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\obj\Debug\net8.0\OptionsStrategies.AssemblyInfo.cs
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\obj\Debug\net8.0\OptionsStrategies.csproj.CoreCompileInputs.cache
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\obj\Debug\net8.0\OptionsStrategies.dll
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\obj\Debug\net8.0\refint\OptionsStrategies.dll
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\obj\Debug\net8.0\OptionsStrategies.pdb
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\obj\Debug\net8.0\OptionsStrategies.genruntimeconfig.cache
+C:\Users\andra\Desktop\learning\Csharp\OptionsStrategies\OptionsStrategies\obj\Debug\net8.0\ref\OptionsStrategies.dll
