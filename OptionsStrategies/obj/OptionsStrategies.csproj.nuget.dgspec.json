@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andra\\Desktop\\learning\\Csharp\\OptionsStrategies\\OptionsStrategies\\OptionsStrategies.csproj": {}
+    "C:\\Users\\andra\\Desktop\\learning\\Csharp\\Github_push\\OptionsStrategies\\OptionsStrategies\\OptionsStrategies.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andra\\Desktop\\learning\\Csharp\\OptionsStrategies\\OptionsStrategies\\OptionsStrategies.csproj": {
+    "C:\\Users\\andra\\Desktop\\learning\\Csharp\\Github_push\\OptionsStrategies\\OptionsStrategies\\OptionsStrategies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andra\\Desktop\\learning\\Csharp\\OptionsStrategies\\OptionsStrategies\\OptionsStrategies.csproj",
+        "projectUniqueName": "C:\\Users\\andra\\Desktop\\learning\\Csharp\\Github_push\\OptionsStrategies\\OptionsStrategies\\OptionsStrategies.csproj",
         "projectName": "OptionsStrategies",
-        "projectPath": "C:\\Users\\andra\\Desktop\\learning\\Csharp\\OptionsStrategies\\OptionsStrategies\\OptionsStrategies.csproj",
+        "projectPath": "C:\\Users\\andra\\Desktop\\learning\\Csharp\\Github_push\\OptionsStrategies\\OptionsStrategies\\OptionsStrategies.csproj",
         "packagesPath": "C:\\Users\\andra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andra\\Desktop\\learning\\Csharp\\OptionsStrategies\\OptionsStrategies\\obj\\",
+        "outputPath": "C:\\Users\\andra\\Desktop\\learning\\Csharp\\Github_push\\OptionsStrategies\\OptionsStrategies\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andra\\AppData\\Roaming\\NuGet\\NuGet.Config",

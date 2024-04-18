@@ -67,5 +67,45 @@ namespace OptionsStrategies
             }
 
         }
+        public static async Task DisplayProgress()
+        {
+            while (true)
+            {
+                await Task.Delay(500);
+                Console.Write('.');
+            }
+        }
+        public static int Ask_number(string question)
+        {
+            int number = 0;
+            while (number == 0)
+            {
+                Console.WriteLine(question);
+                string number_string = Console.ReadLine();
+                try
+                {
+                    number = int.Parse(number_string);
+                }
+                catch
+                {
+                    Console.WriteLine("You need to enter an integer !");
+                    number = 0;
+                }
+            }
+            return number;
+        }
+        public static int Ask_number_between(string question, int min, int max)
+        {
+            int result = Ask_number(question);
+            if ((result < min) || (result > max))
+            {
+                Console.WriteLine("Sorry the number must to be between " + min + " and " + max);
+                return Ask_number_between(question, min, max);
+            }
+            else
+            {
+                return result;
+            }
+        }
     }
 }

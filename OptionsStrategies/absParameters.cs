@@ -10,7 +10,8 @@ namespace OptionsStrategies
     {
         public abstract string Description();
         public abstract void Simulation();
-        public abstract double[] PriceSimulation();
+        //public abstract double[] PriceSimulation();
+        public abstract Task<double[]> PriceSimulation();
     }
     
 }

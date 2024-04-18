@@ -67,45 +67,57 @@ namespace OptionsStrategies
             
         }
 
-        public override double[] PriceSimulation()
+        public async override Task<double[]> PriceSimulation()
         {
-            
-            Simulation();
-            
             double[] parameter = new double[4];
+            await Task.Run(() =>
+            {
+                
+                Simulation();
+
+
+                /*double[] premiumCompute1 = CallPrice(Spaths, interestRate, spot, siggma, maturity, strike1, MCnumber);
+                double[] premiumCompute2 = CallPrice(Spaths, interestRate, spot, siggma, maturity, strike2, MCnumber);
+
+                Console.WriteLine("Simulated Premium :");
+                Console.WriteLine("Premium 1: " + premiumCompute1[0] + " Premium 2: " + premiumCompute2[0]);*/
+
+
+
+                double[] payoff1 = new double[(int)MCnumber];
+                double[] payoff2 = new double[(int)MCnumber];
+                double[] payoffProduct = new double[(int)MCnumber];
+                for (int i = 0; i < MCnumber; i++)
+                {
+                    payoff1[i] = Math.Exp(-interestRate * maturity) * Math.Max(Spaths[i, Spaths.GetLength(1) - 1] - strike1, 0);
+                    payoff2[i] = Math.Exp(-interestRate * maturity) * Math.Max(Spaths[i, Spaths.GetLength(1) - 1] - strike2, 0);
+                    payoffProduct[i] = payoff1[i] - payoff2[i];
+
+                }
+
+                double price = MyTools.Mean(payoffProduct);
+                double priceWithPremium = price - premium1 + premium2;
+
+                double siggmaSimulated = MyTools.StandardDeviation(payoffProduct);
+                double error = 1.96 * siggmaSimulated / Math.Sqrt(MCnumber);
+                parameter[0] = price;
+                parameter[1] = priceWithPremium;
+                parameter[2] = siggmaSimulated;
+                parameter[3] = error;
+            });
+            return parameter;
+        }
+        public void CallPremiumByBlackSholes()
+        {
+
+            //Simulation();
+            
             double[] premiumCompute1 = CallPrice(Spaths, interestRate, spot, siggma, maturity, strike1, MCnumber);
             double[] premiumCompute2 = CallPrice(Spaths, interestRate, spot, siggma, maturity, strike2, MCnumber);
 
             Console.WriteLine("Simulated Premium :");
             Console.WriteLine("Premium 1: " + premiumCompute1[0] + " Premium 2: " + premiumCompute2[0]);
-
-            
-
-            double[] payoff1 = new double[(int)MCnumber];
-            double[] payoff2 = new double[(int)MCnumber];
-            double[] payoffProduct = new double[(int)MCnumber];
-            for (int i = 0; i < MCnumber; i++)
-            {
-                payoff1[i] = Math.Exp(-interestRate * maturity) * Math.Max(Spaths[i, Spaths.GetLength(1) - 1] - strike1, 0);
-                payoff2[i] = Math.Exp(-interestRate * maturity) * Math.Max(Spaths[i, Spaths.GetLength(1) - 1] - strike2, 0);
-                payoffProduct[i] = payoff1[i] - payoff2[i];
-
-            }
-
-            double price = MyTools.Mean(payoffProduct);
-            double priceWithPremium = price - premium1 + premium2;
-
-            double siggmaSimulated = MyTools.StandardDeviation(payoffProduct);
-            double error = 1.96 * siggmaSimulated / Math.Sqrt(MCnumber);
-
-            parameter[0] = price;
-            parameter[1] = priceWithPremium;
-            parameter[2] = siggmaSimulated;
-            parameter[3] = error;
-
-            return parameter;
         }
-
         public double[] CallPrice(double[,] St, double r, double s0, double sig, double T, double K, double N)
         {
             double[] parameter = new double[3];
